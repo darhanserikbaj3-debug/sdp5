@@ -1,0 +1,12 @@
+/Users/darkhanserikbay/Desktop/essentials /sdp/system/src/main/java/com/noti/ConcreteFormators/HtmlFormatting.java
+/Users/darkhanserikbay/Desktop/essentials /sdp/system/src/main/java/com/noti/ConcreteFormators/MarkdownFormatting.java
+/Users/darkhanserikbay/Desktop/essentials /sdp/system/src/main/java/com/noti/ConcreteFormators/PlainTextFormating.java
+/Users/darkhanserikbay/Desktop/essentials /sdp/system/src/main/java/com/noti/ConcreteSenders/EmailNotificationStrategy.java
+/Users/darkhanserikbay/Desktop/essentials /sdp/system/src/main/java/com/noti/ConcreteSenders/SMSNotificationStrategy.java
+/Users/darkhanserikbay/Desktop/essentials /sdp/system/src/main/java/com/noti/ConcreteSenders/TelegramNotificationStrategy.java
+/Users/darkhanserikbay/Desktop/essentials /sdp/system/src/main/java/com/noti/ContextSender/NotificationSenderContext.java
+/Users/darkhanserikbay/Desktop/essentials /sdp/system/src/main/java/com/noti/FormatorContext/MessageFormattingContext.java
+/Users/darkhanserikbay/Desktop/essentials /sdp/system/src/main/java/com/noti/Main.java
+/Users/darkhanserikbay/Desktop/essentials /sdp/system/src/main/java/com/noti/NotificationFormatStrategy/FormattingStrategy.java
+/Users/darkhanserikbay/Desktop/essentials /sdp/system/src/main/java/com/noti/NotificationSendStrategies/NotificationStrategy.java
+/Users/darkhanserikbay/Desktop/essentials /sdp/system/src/main/java/com/noti/Selector/NotificationSelector.java
