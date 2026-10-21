@@ -10,14 +10,14 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import java.util.stream.Stream;
 
-import com.noti.ConcreteFormators.HtmlFormatting;
-import com.noti.ConcreteFormators.MarkdownFormatting;
-import com.noti.ConcreteFormators.PlainTextFormating;
-import com.noti.ConcreteSenders.EmailNotificationStrategy;
-import com.noti.ConcreteSenders.SMSNotificationStrategy;
+import com.noti.ConcreteStrategies.EmailNotificationStrategy;
+import com.noti.ConcreteStrategies.HtmlFormatting;
+import com.noti.ConcreteStrategies.MarkdownFormatting;
+import com.noti.ConcreteStrategies.PlainTextFormating;
+import com.noti.ConcreteStrategies.SMSNotificationStrategy;
 import com.noti.Selector.NotificationSelector;
-import com.noti.NotificationFormatStrategy.FormattingStrategy;
-import com.noti.NotificationSendStrategies.NotificationStrategy;
+import com.noti.Strategies.FormattingStrategy;
+import com.noti.Strategies.NotificationStrategy;
 
 public class NotificationSystemTest {
 
@@ -51,5 +51,12 @@ public class NotificationSystemTest {
     @MethodSource("formattingStrategiesProvider")
     public void testAllStrategiesParameterized(FormattingStrategy strategy) {
         assertNotNull(strategy.format("Hello"));
+    }
+
+    @Test
+    public void testSmsStrategyWithFakeTrafficService() {
+        com.noti.ExternalData.TrafficService fakeTraffic = new com.noti.ExternalData.FakeTrafficService();
+        SMSNotificationStrategy smsStrategy = new SMSNotificationStrategy(fakeTraffic);
+        assertNotNull(smsStrategy);
     }
 }

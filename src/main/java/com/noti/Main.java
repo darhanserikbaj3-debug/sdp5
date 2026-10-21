@@ -1,11 +1,11 @@
 package com.noti; 
 
-import com.noti.ContextSender.NotificationSenderContext;
-import com.noti.FormatorContext.MessageFormattingContext;
+import com.noti.ConcreteStrategies.PlainTextFormating;
+import com.noti.Contexts.MessageFormattingContext;
+import com.noti.Contexts.NotificationSenderContext;
 import com.noti.Selector.NotificationSelector;
-import com.noti.NotificationFormatStrategy.FormattingStrategy;
-import com.noti.NotificationSendStrategies.NotificationStrategy;
-import com.noti.ConcreteFormators.PlainTextFormating;
+import com.noti.Strategies.FormattingStrategy;
+import com.noti.Strategies.NotificationStrategy;
 
 public class Main {
     public static void main(String[] args) {
@@ -35,16 +35,5 @@ public class Main {
 
         String formattedMsg1 = formattingContext.format(baseMessage);
         senderContext.send("+77070000000", formattedMsg1);
-
-
-        System.out.println("=== 3. DEMO: Runtime switching & Major-Client Selector choice ===");
-        boolean isUrgent2 = false;
-        boolean isMajor2 = true;
-
-        formattingContext.setStrategy(NotificationSelector.selectFormator(isMajor2));
-        senderContext.setStrategy(NotificationSelector.selectSender(isUrgent2, isMajor2));
-
-        String formattedMsg2 = formattingContext.format(baseMessage);
-        senderContext.send("telegram_bot1", formattedMsg2);
     }
 }
